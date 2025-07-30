@@ -609,7 +609,4 @@ textarea::placeholder {
     color: var(--secondary-color);
 }
 
-#about-btn:hover, #qualifications-btn:hover {
-    background-color: var(--primary-color-hover) ;
-}
 }
