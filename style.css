@@ -526,24 +526,38 @@ textarea::placeholder {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
   .slider-btn {
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    border: none;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    transition: background 0.2s, color 0.2s;
-  }
-  .slider-btn:active {
     background: var(--secondary-color);
     color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    outline: none;
+  }
+  .slider-btn.active, .slider-btn:focus {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+  }
+
+  @media (max-width: 768px) {
+      .about, .qualifications {
+          height: auto !important;
+          max-height: none !important;
+          min-height: 300px;
+          overflow: auto !important;
+          cursor: default;
+      }
+      .section-content {
+          max-height: 350px;
+          overflow-y: auto;
+          padding-bottom: 1rem;
+      }
   }
 }
 @media (min-width: 769px) {
@@ -553,4 +567,42 @@ textarea::placeholder {
   .slider-slide {
     display: block !important;
   }
+}
+
+/* TOGGLE BUTTON STYLES */
+.toggle-controls {
+    display: flex;
+    background-color: var(--secondary-color);
+    border-radius: 30px;
+    width: 60%;
+    padding: 7px;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+.toggle-btn {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    outline: none;
+}
+.toggle-btn.active, .toggle-btn:focus {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+@media (max-width: 768px) {
+    .toggle-controls {
+        gap: 1rem;
+    }
+    .toggle-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
 }

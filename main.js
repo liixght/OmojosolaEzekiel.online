@@ -167,6 +167,52 @@ function initSlider() {
     handleResize();
 }
 
+// TOGGLE FUNCTIONALITY FOR ABOUT/QUALIFICATIONS
+function initToggleSections() {
+    const aboutBtn = document.getElementById('about-btn');
+    const qualificationsBtn = document.getElementById('qualifications-btn');
+    const aboutSection = document.getElementById('about');
+    const qualificationsSection = document.getElementById('qualifications');
+    
+    function showSection(section) {
+        if (section === 'about') {
+            aboutSection.classList.add('active');
+            qualificationsSection.classList.remove('active');
+            aboutBtn.classList.add('active');
+            qualificationsBtn.classList.remove('active');
+        } else {
+            aboutSection.classList.remove('active');
+            qualificationsSection.classList.add('active');
+            aboutBtn.classList.remove('active');
+            qualificationsBtn.classList.add('active');
+        }
+    }
+
+    aboutBtn.addEventListener('click', function() {
+        showSection('about');
+    });
+    qualificationsBtn.addEventListener('click', function() {
+        showSection('qualifications');
+    });
+
+    // On mobile, show both expanded by default
+    function handleResize() {
+        if (window.innerWidth <= 768) {
+            aboutSection.classList.add('active');
+            qualificationsSection.classList.add('active');
+            aboutBtn.classList.remove('active');
+            qualificationsBtn.classList.remove('active');
+        } else {
+            showSection('about');
+        }
+    }
+    window.addEventListener('resize', handleResize);
+    handleResize();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initToggleSections();
+});
 document.addEventListener('DOMContentLoaded', function() {
     initSlider();
 });
