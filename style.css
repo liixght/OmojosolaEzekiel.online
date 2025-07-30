@@ -1,5 +1,6 @@
 :root {
     --primary-color: #f0c14b;
+    --primary-color-hover: #94835967;
     --secondary-color: #0f1b26;
     --tertiary-color: #0c243b;
     --red-crimson: #140101;
@@ -389,6 +390,11 @@ textarea::placeholder {
     opacity: 0.8;
 }
 
+.toggle-controls {
+    display: none;
+    width: 0;
+}
+
 /* RESPONSIVE BREAKPOINTS */
             @media (max-width: 768px) {
     .navbar {
@@ -445,13 +451,24 @@ textarea::placeholder {
     }
 
     .about, .qualifications {
-        height: 120px; /* Smaller collapsed height on mobile */
-        max-height: 120px;
-        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1), max-height 0.8s ease-in-out, height 0.8s ease-in-out; /* Added transition for mobile */
+        height: auto;
+        max-height: 450px; /* Adjust as needed */
+        overflow-y: auto;
+        cursor: default;
     }
 
     .about:hover, .qualifications:hover {
-        max-height: 600px; /* Limit expansion on mobile */
+        transform: none;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-content {
+        opacity: 1;
+        transform: none;
+    }
+
+    .section-preview {
+        display: none;
     }
 
     .footer {
@@ -545,20 +562,7 @@ textarea::placeholder {
     color: var(--secondary-color);
   }
 
-  @media (max-width: 768px) {
-      .about, .qualifications {
-          height: auto !important;
-          max-height: none !important;
-          min-height: 300px;
-          overflow: auto !important;
-          cursor: default;
-      }
-      .section-content {
-          max-height: 350px;
-          overflow-y: auto;
-          padding-bottom: 1rem;
-      }
-  }
+
 }
 @media (min-width: 769px) {
   .slider-controls {
@@ -571,17 +575,25 @@ textarea::placeholder {
 
 /* TOGGLE BUTTON STYLES */
 .toggle-controls {
-    display: flex;
-    background-color: var(--secondary-color);
-    border-radius: 30px;
-    width: 60%;
-    padding: 7px;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: auto;
-    margin-bottom: 2rem;
-}
-.toggle-btn {
+        display: none;
+    }
+
+
+
+@media (max-width: 768px) {
+    .toggle-controls {
+       display: flex;
+        background-color: var(--secondary-color);
+        border-radius: 30px;
+        width: 80%;
+        padding: 7px;
+        justify-content: center;
+        gap: 1rem;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    .toggle-btn {
     background: var(--secondary-color);
     color: var(--primary-color);
     border: none;
@@ -592,17 +604,12 @@ textarea::placeholder {
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
     outline: none;
-}
-.toggle-btn.active, .toggle-btn:focus {
+    } .toggle-btn.active, .toggle-btn:focus {
     background: var(--primary-color);
     color: var(--secondary-color);
 }
-@media (max-width: 768px) {
-    .toggle-controls {
-        gap: 1rem;
-    }
-    .toggle-btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 1rem;
-    }
+
+#about-btn:hover, #qualifications-btn:hover {
+    background-color: var(--primary-color-hover) ;
+}
 }
