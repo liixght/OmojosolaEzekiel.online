@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Ezekiel Omojosola - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezekiel Omojosola - Data Analyst Portfolio</title>
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="navbar">
-        <h1 class="title-head"><a href="#">Mr Ezekiel</a></h1>
+        <h1 class="title-head"><a href="#">Ezekiel</a></h1>
         <div class="menu-toggle" onclick="toggleMenu()">
             <span></span>
             <span></span>
@@ -20,9 +20,9 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="#about" onclick="closeMenu()">Skills</a></li>  
-                <li><a href="#qualifications" onclick="closeMenu()">Projects</a></li>
-                <li><a href="#footer" onclick="closeMenu()">Contact</a></li>
+                <li><a class="skills" href="#about" onclick="closeMenu()">Skills</a></li>  
+                <li><a class="projects" href="#qualifications" onclick="closeMenu()">Projects</a></li>
+                <li><a class="contact" href="#footer" onclick="closeMenu()">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -31,8 +31,8 @@
         <img class="profile-img" src="images/Formal.png" alt="Ezekiel Omojosola Profile">
         
         <div class="header">
-            <h1 class="header-intro" id="animatedHeaderTitle">I Am Ezekiel.</h1>
-            <p class="header-text">Data Analyst & Groundwater Specialist</p>
+            <h1 class="header-intro animate-title" id="animatedHeaderTitle" data-text="I Am Ezekiel.">I Am Ezekiel.</h1>
+            <p class="header-text">Data Scientist & Groundwater Specialist</p>
         </div>
     </div>
     <!-- <div class="slider-controls">
@@ -55,7 +55,7 @@
                     <br><br>
                     My journey into groundwater research began in my sophomore year during an internship with the Oyo State Rural Water Supply and Sanitation Agency. That experience ignited a deep interest in groundwater exploration — from data collection and interpretation to borehole rehabilitation.
                     <br><br>
-                    Recognizing the importance of geospatial tools in water research, I pursued training at the National Space Research and Development Agency, where I worked closely with experts in Geographical Information Systems (GIS). Since then, I've built hands-on experience using ArcGIS, Eokis Imaging, and other remote sensing tools to analyze groundwater flow and model erosion patterns.
+                    Recognizing the importance of geospatial tools in water research, I pursued training at the National Space Research and Development Agency, where I worked closely with experts in Geographical Information Systems (GIS). Since then, I've built hands-on experience using ArcGIS, Erdas Imaging, and other remote sensing tools to analyze groundwater flow and model erosion patterns.
                     <br><br>
                     Today, my research interests focus on:
                     <br>• Groundwater recharge and contamination
@@ -79,7 +79,7 @@
                     <strong>Technical Skills:</strong><br>
                     • ArcGIS & QGIS<br>
                     • Remote Sensing & Satellite Imagery Analysis<br>
-                    • Eokis Imaging Software<br>
+                    • Erdas Imaging Software<br>
                     • Groundwater Modeling<br>
                     • Data Analysis & Visualization<br>
                     • Machine Learning Applications in Hydrology<br><br>
@@ -99,7 +99,7 @@
     </div>
 
     <div class="form">
-        <form action="mailto:chat.temilope@gmail.com" method="post" enctype="text/plain">
+        <form action="https://formsubmit.co/chat.temilope@gmail.com" method="post" enctype="text/plain">
             <h1 class="form-title">Contact Me</h1>
             <section>
                 <input type="text" name="name" class="input-field" id="name" placeholder="Enter Name" required>
@@ -110,13 +110,16 @@
                 <textarea name="message" id="message" rows="8" placeholder="I am interested in your work and would like to collaborate with you">I am interested in your work and would like to collaborate with you</textarea>
             </section>
             <input class="submit" type="submit" value="Send Message">
+            <input type="hidden" name="_autoresponse" value="Thankyou it works!!!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
         </form>
     </div>
 
     <footer class="footer" id="footer">
         <div class="contact-links">
-            <a href="https://x.com/Omojasola6?t=mNdrE2rnI_wnzE7PE2ZkMA&s=09" target="_blank" aria-label="Twitter"><i class="fa-brands fa-square-x-twitter"></i></a>
-            <a href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/Omojasola6" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/omojosola-ezekiel" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
         </div>
         <div class="footer-text">
             <p>Omojosola Juwon Ezekiel &copy;2025. All rights reserved.</p>
